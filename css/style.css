@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Medium.ttf'); /* IE9 Compat Modes */
+  font-weight: 400
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Light.ttf'); /* IE9 Compat Modes */
+  font-weight: 300
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.ttf'); /* IE9 Compat Modes */
+  font-weight: 700
+}
+body {
+	font-family: 'Roboto'
+}
 h1 {
 	font-size: 18px;
 }
