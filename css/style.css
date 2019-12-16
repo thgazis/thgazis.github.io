@@ -1,26 +1,113 @@
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Medium.ttf'); /* IE9 Compat Modes */
-  font-weight: 400
+
+body {
+  margin: 0;
+  font-family: ZonaPro, sans-serif;
 }
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Light.ttf'); /* IE9 Compat Modes */
-  font-weight: 300
+.container {
+  background-color: black;
+  width: 1020px;
+  margin: 0 auto;
 }
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Bold.ttf'); /* IE9 Compat Modes */
-  font-weight: 700
+
+.branding {
+  padding: 20px 0;
+  text-align: center;
 }
-body {
-	font-family: 'Roboto'
+
+.navigation {
+  border-top: 1px solid #0babce;
+  border-bottom: 1px solid #dedede;
 }
-h1 {
-	font-size: 18px;
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.header {
-	background: #659dbd;
-	text-align: center;
+
+.navigation ul li {
+  white-space: nowrap;
 }
+
+.navigation ul li a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #58585a;
+  text-decoration: none;
+  line-height: 70px;
+  display: block;
+}
+
+.highlight {
+  position: relative;
+  z-index: 0;
+}
+
+.highlight:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 50%;
+  height: 100%;
+  background: #f7f7f7;
+}
+
+.highlight:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  width: 50%;
+  height: 100%;
+  background: #dfe3e4;
+}
+
+.highlight-banner {
+  background: url(../images/banner.jpg) center top no-repeat;
+  height: 390px;
+  min-width: 1020px;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight-text {
+  padding: 80px 50px 70px 530px;
+}
+
+.highlight-text h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #58585a;
+}
+
+.highlight-text h1 span {
+  font-weight: 100;
+  display: block;
+}
+
+.highlight-text p {
+  font-weight: 100;
+  font-size: 18px;
+  color: #58585a;
+}
+
+#tomeis  {
+  background-color: #eeeeee;
+  height :280;
+}
+
+
+
+
+
+
+
