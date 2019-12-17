@@ -78,7 +78,9 @@ body {
 	margin: 0px;
 
 }
-
+.content {
+	color: white;
+}
 .footer {
 	font-size: 10px;
 	position: fixed;
