@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/mystyle.css">
+<script src="js/menu.js">
+</script>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="#">CV</a>
+  <a href="#">Projects</a>
+  <a href="#">Interests</a>
+  <a href="#">Contact</a>
+  <a href="tensorflowjs.html">TS.Js(Beta)</a>
+  <a href="opencv.html">OpenCV.JS</a>
+</div>
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <div class="banner"><h2 class="name">OpenCV.js Online Demo</h2>
+  <p>This is an demo of the OpenCV library on JavaScript.</p>
+
+<p id="status">OpenCV.js is loading...</p>
+<div>
+  <div class="inputoutput">
+    <img id="imageSrc" alt="No Image" />
+    <div class="caption">imageSrc <input type="file" id="fileInput" name="file" /></div>
+  </div>
+  <div class="inputoutput">
+    <canvas id="canvasOutput" ></canvas>
+    <div class="caption">canvasOutput</div>
+  </div>
+</div>
+<script type="text/javascript">
+let imgElement = document.getElementById('imageSrc');
+let inputElement = document.getElementById('fileInput');
+inputElement.addEventListener('change', (e) => {
+  imgElement.src = URL.createObjectURL(e.target.files[0]);
+}, false);
+imgElement.onload = function() {
+  let mat = cv.imread(imgElement);
+  let dst = new cv.Mat();
+  cv.Canny(mat, dst, 50, 100, 3, false);
+  cv.imshow('canvasOutput', dst);
+  mat.delete();
+};
+function onOpenCvReady() {
+  document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
+}
+</script>
+<script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+
+  </div>
+
+
+
+   <div class="footer">
+	Developed by me
+	</div>		
+</body>
+</html> 
